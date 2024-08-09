@@ -11,10 +11,10 @@
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body id="home">
+  <body data-bs-spy="scroll" data-bs-target="#navId">
     <div class="container-fluid p-0" style="overflow: hidden">
       <!-- navbar -->
-      <nav class="navbar navbar-expand-lg fixed-top bg-primary shadow-sm" data-bs-theme="dark">
+      <nav id="navId" class="navbar navbar-expand-lg fixed-top bg-primary shadow-sm" data-bs-theme="dark">
         <div class="container">
           <a class="navbar-brand" href="#">Fathan Abdul</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <a class="nav-link" href="#home">Home</a>
               <a class="nav-link" href="#about">About Me</a>
               <a class="nav-link" href="#gallery">Gallery</a>
               <a class="nav-link" href="#contact">Contact</a>
@@ -33,7 +33,7 @@
       <!-- akhir navbar -->
 
       <!-- jumbotron -->
-      <section class="hero text-center container-fluid ps-0 pe-0" style="padding-top: 6rem">
+      <section id="home" class="hero text-center container-fluid ps-0 pe-0" style="padding-top: 6rem">
         <img src="img/photo.png" alt="burung hantu di pohon" class="img-thumbnail rounded-circle" width="200px" />
         <h1 class="display-4">Fathan Abdul</h1>
         <h5 class="fw-light">Welcome to My Website</h5>

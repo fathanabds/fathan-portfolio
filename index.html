@@ -11,6 +11,9 @@
     <!-- bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
+    <!-- aos css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -27,7 +30,7 @@
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="#home">Home</a>
               <a class="nav-link" href="#about">About Me</a>
-              <a class="nav-link" href="#gallery">Gallery</a>
+              <a class="nav-link" href="#card-gallery">Card Gallery</a>
               <a class="nav-link" href="#contact">Contact</a>
             </div>
           </div>
@@ -36,126 +39,174 @@
       <!-- akhir navbar -->
 
       <!-- jumbotron -->
-      <section id="home" class="hero text-center container-fluid ps-0 pe-0" style="padding-top: 6rem">
-        <img src="img/photo.png" alt="burung hantu di pohon" class="img-thumbnail rounded-circle" width="200px" />
-        <h1 class="display-4">Fathan Abdul</h1>
-        <h5 class="fw-light">Welcome to My Website</h5>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#ffffff"
-            fill-opacity="1"
-            d="M0,256L6.2,245.3C12.3,235,25,213,37,213.3C49.2,213,62,235,74,234.7C86.2,235,98,213,111,202.7C123.1,192,135,192,148,181.3C160,171,172,149,185,144C196.9,139,209,149,222,165.3C233.8,181,246,203,258,197.3C270.8,192,283,160,295,138.7C307.7,117,320,107,332,106.7C344.6,107,357,117,369,133.3C381.5,149,394,171,406,160C418.5,149,431,107,443,90.7C455.4,75,468,85,480,101.3C492.3,117,505,139,517,133.3C529.2,128,542,96,554,74.7C566.2,53,578,43,591,37.3C603.1,32,615,32,628,58.7C640,85,652,139,665,170.7C676.9,203,689,213,702,224C713.8,235,726,245,738,240C750.8,235,763,213,775,192C787.7,171,800,149,812,149.3C824.6,149,837,171,849,149.3C861.5,128,874,64,886,58.7C898.5,53,911,107,923,122.7C935.4,139,948,117,960,112C972.3,107,985,117,997,144C1009.2,171,1022,213,1034,218.7C1046.2,224,1058,192,1071,154.7C1083.1,117,1095,75,1108,90.7C1120,107,1132,181,1145,224C1156.9,267,1169,277,1182,250.7C1193.8,224,1206,160,1218,144C1230.8,128,1243,160,1255,165.3C1267.7,171,1280,149,1292,154.7C1304.6,160,1317,192,1329,208C1341.5,224,1354,224,1366,229.3C1378.5,235,1391,245,1403,224C1415.4,203,1428,149,1434,122.7L1440,96L1440,320L1433.8,320C1427.7,320,1415,320,1403,320C1390.8,320,1378,320,1366,320C1353.8,320,1342,320,1329,320C1316.9,320,1305,320,1292,320C1280,320,1268,320,1255,320C1243.1,320,1231,320,1218,320C1206.2,320,1194,320,1182,320C1169.2,320,1157,320,1145,320C1132.3,320,1120,320,1108,320C1095.4,320,1083,320,1071,320C1058.5,320,1046,320,1034,320C1021.5,320,1009,320,997,320C984.6,320,972,320,960,320C947.7,320,935,320,923,320C910.8,320,898,320,886,320C873.8,320,862,320,849,320C836.9,320,825,320,812,320C800,320,788,320,775,320C763.1,320,751,320,738,320C726.2,320,714,320,702,320C689.2,320,677,320,665,320C652.3,320,640,320,628,320C615.4,320,603,320,591,320C578.5,320,566,320,554,320C541.5,320,529,320,517,320C504.6,320,492,320,480,320C467.7,320,455,320,443,320C430.8,320,418,320,406,320C393.8,320,382,320,369,320C356.9,320,345,320,332,320C320,320,308,320,295,320C283.1,320,271,320,258,320C246.2,320,234,320,222,320C209.2,320,197,320,185,320C172.3,320,160,320,148,320C135.4,320,123,320,111,320C98.5,320,86,320,74,320C61.5,320,49,320,37,320C24.6,320,12,320,6,320L0,320Z"
-          ></path>
-        </svg>
+      <section id="home" style="padding-top: 6rem">
+        <div class="container-fluid text-center ps-0 pe-0">
+          <img src="img/photo.png" alt="burung hantu di pohon" class="img-thumbnail rounded-circle" width="200px" />
+          <h1 class="display-4">Fathan Abdul</h1>
+          <h5 class="fw-light"></h5>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#ffffff"
+              fill-opacity="1"
+              d="M0,256L6.2,245.3C12.3,235,25,213,37,213.3C49.2,213,62,235,74,234.7C86.2,235,98,213,111,202.7C123.1,192,135,192,148,181.3C160,171,172,149,185,144C196.9,139,209,149,222,165.3C233.8,181,246,203,258,197.3C270.8,192,283,160,295,138.7C307.7,117,320,107,332,106.7C344.6,107,357,117,369,133.3C381.5,149,394,171,406,160C418.5,149,431,107,443,90.7C455.4,75,468,85,480,101.3C492.3,117,505,139,517,133.3C529.2,128,542,96,554,74.7C566.2,53,578,43,591,37.3C603.1,32,615,32,628,58.7C640,85,652,139,665,170.7C676.9,203,689,213,702,224C713.8,235,726,245,738,240C750.8,235,763,213,775,192C787.7,171,800,149,812,149.3C824.6,149,837,171,849,149.3C861.5,128,874,64,886,58.7C898.5,53,911,107,923,122.7C935.4,139,948,117,960,112C972.3,107,985,117,997,144C1009.2,171,1022,213,1034,218.7C1046.2,224,1058,192,1071,154.7C1083.1,117,1095,75,1108,90.7C1120,107,1132,181,1145,224C1156.9,267,1169,277,1182,250.7C1193.8,224,1206,160,1218,144C1230.8,128,1243,160,1255,165.3C1267.7,171,1280,149,1292,154.7C1304.6,160,1317,192,1329,208C1341.5,224,1354,224,1366,229.3C1378.5,235,1391,245,1403,224C1415.4,203,1428,149,1434,122.7L1440,96L1440,320L1433.8,320C1427.7,320,1415,320,1403,320C1390.8,320,1378,320,1366,320C1353.8,320,1342,320,1329,320C1316.9,320,1305,320,1292,320C1280,320,1268,320,1255,320C1243.1,320,1231,320,1218,320C1206.2,320,1194,320,1182,320C1169.2,320,1157,320,1145,320C1132.3,320,1120,320,1108,320C1095.4,320,1083,320,1071,320C1058.5,320,1046,320,1034,320C1021.5,320,1009,320,997,320C984.6,320,972,320,960,320C947.7,320,935,320,923,320C910.8,320,898,320,886,320C873.8,320,862,320,849,320C836.9,320,825,320,812,320C800,320,788,320,775,320C763.1,320,751,320,738,320C726.2,320,714,320,702,320C689.2,320,677,320,665,320C652.3,320,640,320,628,320C615.4,320,603,320,591,320C578.5,320,566,320,554,320C541.5,320,529,320,517,320C504.6,320,492,320,480,320C467.7,320,455,320,443,320C430.8,320,418,320,406,320C393.8,320,382,320,369,320C356.9,320,345,320,332,320C320,320,308,320,295,320C283.1,320,271,320,258,320C246.2,320,234,320,222,320C209.2,320,197,320,185,320C172.3,320,160,320,148,320C135.4,320,123,320,111,320C98.5,320,86,320,74,320C61.5,320,49,320,37,320C24.6,320,12,320,6,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
       </section>
       <!-- akhir jumbotron -->
 
       <!-- about me -->
-      <section id="about" class="container-fluid ps-0 pe-0">
-        <h2 class="text-center mb-4">About Me</h2>
-        <div class="row justify-content-center fs-5 ps-5 pe-5" style="text-align: justify">
-          <div class="col-md col-xl-5">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro harum sunt veritatis possimus, nostrum rem modi, tempore quasi explicabo nemo temporibus error tempora beatae sint.</p>
+      <section id="about">
+        <div class="container-fluid ps-0 pe-0">
+          <h2 data-aos="fade-up" class="text-center mb-4">About Me</h2>
+          <div class="row justify-content-center fs-5 ps-5 pe-5" style="text-align: justify">
+            <div data-aos="fade-right" class="col-md col-xl-5">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro harum sunt veritatis possimus, nostrum rem modi, tempore quasi explicabo nemo temporibus error tempora beatae sint.</p>
+            </div>
+            <div data-aos="fade-left" class="col-md col-xl-5">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto repellendus consequatur at eligendi perspiciatis. Unde minima voluptatum expedita eius facere!</p>
+            </div>
           </div>
-          <div class="col-md col-xl-5">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto repellendus consequatur at eligendi perspiciatis. Unde minima voluptatum expedita eius facere!</p>
-          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#e2edff"
+              fill-opacity="1"
+              d="M0,64L6.2,80C12.3,96,25,128,37,165.3C49.2,203,62,245,74,266.7C86.2,288,98,288,111,282.7C123.1,277,135,267,148,266.7C160,267,172,277,185,256C196.9,235,209,181,222,160C233.8,139,246,149,258,154.7C270.8,160,283,160,295,154.7C307.7,149,320,139,332,128C344.6,117,357,107,369,101.3C381.5,96,394,96,406,112C418.5,128,431,160,443,197.3C455.4,235,468,277,480,261.3C492.3,245,505,171,517,165.3C529.2,160,542,224,554,240C566.2,256,578,224,591,202.7C603.1,181,615,171,628,170.7C640,171,652,181,665,181.3C676.9,181,689,171,702,181.3C713.8,192,726,224,738,218.7C750.8,213,763,171,775,176C787.7,181,800,235,812,224C824.6,213,837,139,849,106.7C861.5,75,874,85,886,101.3C898.5,117,911,139,923,170.7C935.4,203,948,245,960,266.7C972.3,288,985,288,997,288C1009.2,288,1022,288,1034,256C1046.2,224,1058,160,1071,128C1083.1,96,1095,96,1108,101.3C1120,107,1132,117,1145,112C1156.9,107,1169,85,1182,101.3C1193.8,117,1206,171,1218,208C1230.8,245,1243,267,1255,266.7C1267.7,267,1280,245,1292,202.7C1304.6,160,1317,96,1329,85.3C1341.5,75,1354,117,1366,149.3C1378.5,181,1391,203,1403,208C1415.4,213,1428,203,1434,197.3L1440,192L1440,320L1433.8,320C1427.7,320,1415,320,1403,320C1390.8,320,1378,320,1366,320C1353.8,320,1342,320,1329,320C1316.9,320,1305,320,1292,320C1280,320,1268,320,1255,320C1243.1,320,1231,320,1218,320C1206.2,320,1194,320,1182,320C1169.2,320,1157,320,1145,320C1132.3,320,1120,320,1108,320C1095.4,320,1083,320,1071,320C1058.5,320,1046,320,1034,320C1021.5,320,1009,320,997,320C984.6,320,972,320,960,320C947.7,320,935,320,923,320C910.8,320,898,320,886,320C873.8,320,862,320,849,320C836.9,320,825,320,812,320C800,320,788,320,775,320C763.1,320,751,320,738,320C726.2,320,714,320,702,320C689.2,320,677,320,665,320C652.3,320,640,320,628,320C615.4,320,603,320,591,320C578.5,320,566,320,554,320C541.5,320,529,320,517,320C504.6,320,492,320,480,320C467.7,320,455,320,443,320C430.8,320,418,320,406,320C393.8,320,382,320,369,320C356.9,320,345,320,332,320C320,320,308,320,295,320C283.1,320,271,320,258,320C246.2,320,234,320,222,320C209.2,320,197,320,185,320C172.3,320,160,320,148,320C135.4,320,123,320,111,320C98.5,320,86,320,74,320C61.5,320,49,320,37,320C24.6,320,12,320,6,320L0,320Z"
+            ></path>
+          </svg>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#e2edff"
-            fill-opacity="1"
-            d="M0,64L6.2,80C12.3,96,25,128,37,165.3C49.2,203,62,245,74,266.7C86.2,288,98,288,111,282.7C123.1,277,135,267,148,266.7C160,267,172,277,185,256C196.9,235,209,181,222,160C233.8,139,246,149,258,154.7C270.8,160,283,160,295,154.7C307.7,149,320,139,332,128C344.6,117,357,107,369,101.3C381.5,96,394,96,406,112C418.5,128,431,160,443,197.3C455.4,235,468,277,480,261.3C492.3,245,505,171,517,165.3C529.2,160,542,224,554,240C566.2,256,578,224,591,202.7C603.1,181,615,171,628,170.7C640,171,652,181,665,181.3C676.9,181,689,171,702,181.3C713.8,192,726,224,738,218.7C750.8,213,763,171,775,176C787.7,181,800,235,812,224C824.6,213,837,139,849,106.7C861.5,75,874,85,886,101.3C898.5,117,911,139,923,170.7C935.4,203,948,245,960,266.7C972.3,288,985,288,997,288C1009.2,288,1022,288,1034,256C1046.2,224,1058,160,1071,128C1083.1,96,1095,96,1108,101.3C1120,107,1132,117,1145,112C1156.9,107,1169,85,1182,101.3C1193.8,117,1206,171,1218,208C1230.8,245,1243,267,1255,266.7C1267.7,267,1280,245,1292,202.7C1304.6,160,1317,96,1329,85.3C1341.5,75,1354,117,1366,149.3C1378.5,181,1391,203,1403,208C1415.4,213,1428,203,1434,197.3L1440,192L1440,320L1433.8,320C1427.7,320,1415,320,1403,320C1390.8,320,1378,320,1366,320C1353.8,320,1342,320,1329,320C1316.9,320,1305,320,1292,320C1280,320,1268,320,1255,320C1243.1,320,1231,320,1218,320C1206.2,320,1194,320,1182,320C1169.2,320,1157,320,1145,320C1132.3,320,1120,320,1108,320C1095.4,320,1083,320,1071,320C1058.5,320,1046,320,1034,320C1021.5,320,1009,320,997,320C984.6,320,972,320,960,320C947.7,320,935,320,923,320C910.8,320,898,320,886,320C873.8,320,862,320,849,320C836.9,320,825,320,812,320C800,320,788,320,775,320C763.1,320,751,320,738,320C726.2,320,714,320,702,320C689.2,320,677,320,665,320C652.3,320,640,320,628,320C615.4,320,603,320,591,320C578.5,320,566,320,554,320C541.5,320,529,320,517,320C504.6,320,492,320,480,320C467.7,320,455,320,443,320C430.8,320,418,320,406,320C393.8,320,382,320,369,320C356.9,320,345,320,332,320C320,320,308,320,295,320C283.1,320,271,320,258,320C246.2,320,234,320,222,320C209.2,320,197,320,185,320C172.3,320,160,320,148,320C135.4,320,123,320,111,320C98.5,320,86,320,74,320C61.5,320,49,320,37,320C24.6,320,12,320,6,320L0,320Z"
-          ></path>
-        </svg>
       </section>
       <!-- akhir about me -->
 
-      <!-- galeri -->
-      <section id="gallery" class="container-fluid ps-0 pe-0">
-        <h2 class="text-center mb-4">Gallery</h2>
-        <div class="container text-center mb-5">
-          <div class="row justify-content-center">
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="img/gallery/1.jpg" class="card-img-top" alt="A bathroom with a tub and a shower" />
-                <div class="card-body">
-                  <p class="card-text">A bathroom with a tub and a shower.</p>
+      <!-- card galeri -->
+      <section id="card-gallery">
+        <div class="container-fluid ps-0 pe-0">
+          <h2 data-aos="fade-up" class="text-center mb-4">Card Gallery</h2>
+          <div class="container text-center mb-5">
+            <div class="row justify-content-center">
+              <div class="col-md-4 mb-3">
+                <div data-aos="flip-right" class="card">
+                  <img src="img/card-gallery/1.jpg" class="card-img-top" alt="A bathroom with a tub and a shower" />
+                  <div class="card-body">
+                    <p class="card-text">A bathroom with a tub and a shower.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="img/gallery/2.jpg" class="card-img-top" alt="A modern bathroom with grey walls and white fixtures" />
-                <div class="card-body">
-                  <p class="card-text">A modern bathroom with grey walls and white fixtures.</p>
+              <div class="col-md-4 mb-3">
+                <div data-aos="flip-up" data-aos-delay="100" class="card">
+                  <img src="img/card-gallery/2.jpg" class="card-img-top" alt="A modern bathroom with grey walls and white fixtures" />
+                  <div class="card-body">
+                    <p class="card-text">A modern bathroom with grey walls.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="img/gallery/3.jpg" class="card-img-top" alt="A man standing in a large circular room with graffiti" />
-                <div class="card-body">
-                  <p class="card-text">A man standing in a large circular room with graffiti.</p>
+              <div class="col-md-4 mb-3">
+                <div data-aos="flip-left" data-aos-delay="200" class="card">
+                  <img src="img/card-gallery/3.jpg" class="card-img-top" alt="A man standing in a large circular room with graffiti" />
+                  <div class="card-body">
+                    <p class="card-text">A man standing in a large circular room.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="img/gallery/4.jpg" class="card-img-top" alt="A large house with a pool and a view of the mountains" />
-                <div class="card-body">
-                  <p class="card-text">A large house with a pool and a view of the mountains.</p>
+              <div class="col-md-4 mb-3">
+                <div data-aos="flip-right" class="card">
+                  <img src="img/card-gallery/4.jpg" data-aos-delay="300" class="card-img-top" alt="A large house with a pool and a view of the mountains" />
+                  <div class="card-body">
+                    <p class="card-text">A large house with a pool.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="img/gallery/5.jpg" class="card-img-top" alt="Plateau de Coscione" />
-                <div class="card-body">
-                  <p class="card-text">Plateau de Coscione.</p>
+              <div class="col-md-4 mb-3">
+                <div data-aos="flip-left" data-aos-delay="400" class="card">
+                  <img src="img/card-gallery/5.jpg" class="card-img-top" alt="Plateau de Coscione" />
+                  <div class="card-body">
+                    <p class="card-text">Plateau de Coscione.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#ffffff"
+              fill-opacity="1"
+              d="M0,128L6.2,133.3C12.3,139,25,149,37,181.3C49.2,213,62,267,74,250.7C86.2,235,98,149,111,122.7C123.1,96,135,128,148,138.7C160,149,172,139,185,117.3C196.9,96,209,64,222,58.7C233.8,53,246,75,258,74.7C270.8,75,283,53,295,48C307.7,43,320,53,332,96C344.6,139,357,213,369,224C381.5,235,394,181,406,170.7C418.5,160,431,192,443,186.7C455.4,181,468,139,480,106.7C492.3,75,505,53,517,48C529.2,43,542,53,554,69.3C566.2,85,578,107,591,149.3C603.1,192,615,256,628,272C640,288,652,256,665,213.3C676.9,171,689,117,702,122.7C713.8,128,726,192,738,213.3C750.8,235,763,213,775,181.3C787.7,149,800,107,812,96C824.6,85,837,107,849,122.7C861.5,139,874,149,886,160C898.5,171,911,181,923,176C935.4,171,948,149,960,165.3C972.3,181,985,235,997,218.7C1009.2,203,1022,117,1034,74.7C1046.2,32,1058,32,1071,37.3C1083.1,43,1095,53,1108,69.3C1120,85,1132,107,1145,96C1156.9,85,1169,43,1182,42.7C1193.8,43,1206,85,1218,117.3C1230.8,149,1243,171,1255,176C1267.7,181,1280,171,1292,154.7C1304.6,139,1317,117,1329,90.7C1341.5,64,1354,32,1366,26.7C1378.5,21,1391,43,1403,74.7C1415.4,107,1428,149,1434,170.7L1440,192L1440,320L1433.8,320C1427.7,320,1415,320,1403,320C1390.8,320,1378,320,1366,320C1353.8,320,1342,320,1329,320C1316.9,320,1305,320,1292,320C1280,320,1268,320,1255,320C1243.1,320,1231,320,1218,320C1206.2,320,1194,320,1182,320C1169.2,320,1157,320,1145,320C1132.3,320,1120,320,1108,320C1095.4,320,1083,320,1071,320C1058.5,320,1046,320,1034,320C1021.5,320,1009,320,997,320C984.6,320,972,320,960,320C947.7,320,935,320,923,320C910.8,320,898,320,886,320C873.8,320,862,320,849,320C836.9,320,825,320,812,320C800,320,788,320,775,320C763.1,320,751,320,738,320C726.2,320,714,320,702,320C689.2,320,677,320,665,320C652.3,320,640,320,628,320C615.4,320,603,320,591,320C578.5,320,566,320,554,320C541.5,320,529,320,517,320C504.6,320,492,320,480,320C467.7,320,455,320,443,320C430.8,320,418,320,406,320C393.8,320,382,320,369,320C356.9,320,345,320,332,320C320,320,308,320,295,320C283.1,320,271,320,258,320C246.2,320,234,320,222,320C209.2,320,197,320,185,320C172.3,320,160,320,148,320C135.4,320,123,320,111,320C98.5,320,86,320,74,320C61.5,320,49,320,37,320C24.6,320,12,320,6,320L0,320Z"
+            ></path>
+          </svg>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#ffffff"
-            fill-opacity="1"
-            d="M0,128L6.2,133.3C12.3,139,25,149,37,181.3C49.2,213,62,267,74,250.7C86.2,235,98,149,111,122.7C123.1,96,135,128,148,138.7C160,149,172,139,185,117.3C196.9,96,209,64,222,58.7C233.8,53,246,75,258,74.7C270.8,75,283,53,295,48C307.7,43,320,53,332,96C344.6,139,357,213,369,224C381.5,235,394,181,406,170.7C418.5,160,431,192,443,186.7C455.4,181,468,139,480,106.7C492.3,75,505,53,517,48C529.2,43,542,53,554,69.3C566.2,85,578,107,591,149.3C603.1,192,615,256,628,272C640,288,652,256,665,213.3C676.9,171,689,117,702,122.7C713.8,128,726,192,738,213.3C750.8,235,763,213,775,181.3C787.7,149,800,107,812,96C824.6,85,837,107,849,122.7C861.5,139,874,149,886,160C898.5,171,911,181,923,176C935.4,171,948,149,960,165.3C972.3,181,985,235,997,218.7C1009.2,203,1022,117,1034,74.7C1046.2,32,1058,32,1071,37.3C1083.1,43,1095,53,1108,69.3C1120,85,1132,107,1145,96C1156.9,85,1169,43,1182,42.7C1193.8,43,1206,85,1218,117.3C1230.8,149,1243,171,1255,176C1267.7,181,1280,171,1292,154.7C1304.6,139,1317,117,1329,90.7C1341.5,64,1354,32,1366,26.7C1378.5,21,1391,43,1403,74.7C1415.4,107,1428,149,1434,170.7L1440,192L1440,320L1433.8,320C1427.7,320,1415,320,1403,320C1390.8,320,1378,320,1366,320C1353.8,320,1342,320,1329,320C1316.9,320,1305,320,1292,320C1280,320,1268,320,1255,320C1243.1,320,1231,320,1218,320C1206.2,320,1194,320,1182,320C1169.2,320,1157,320,1145,320C1132.3,320,1120,320,1108,320C1095.4,320,1083,320,1071,320C1058.5,320,1046,320,1034,320C1021.5,320,1009,320,997,320C984.6,320,972,320,960,320C947.7,320,935,320,923,320C910.8,320,898,320,886,320C873.8,320,862,320,849,320C836.9,320,825,320,812,320C800,320,788,320,775,320C763.1,320,751,320,738,320C726.2,320,714,320,702,320C689.2,320,677,320,665,320C652.3,320,640,320,628,320C615.4,320,603,320,591,320C578.5,320,566,320,554,320C541.5,320,529,320,517,320C504.6,320,492,320,480,320C467.7,320,455,320,443,320C430.8,320,418,320,406,320C393.8,320,382,320,369,320C356.9,320,345,320,332,320C320,320,308,320,295,320C283.1,320,271,320,258,320C246.2,320,234,320,222,320C209.2,320,197,320,185,320C172.3,320,160,320,148,320C135.4,320,123,320,111,320C98.5,320,86,320,74,320C61.5,320,49,320,37,320C24.6,320,12,320,6,320L0,320Z"
-          ></path>
-        </svg>
       </section>
-      <!-- akhir galeri -->
+      <!-- akhir card galeri -->
+
+      <!-- gallery -->
+      <section id="gallery">
+        <div class="container">
+          <h2 class="text-center mb-4">Gallery</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/1.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/2.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/3.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/4.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/5.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/6.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/7.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/8.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/9.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+            <div class="col-md-3">
+              <a href=""><img class="img-fluid gallery-img" src="img/gallery/10.jpg" alt="An aerial view of a beach" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- akhir gallery -->
 
       <!-- contact me -->
-      <section id="contact" class="container pb-5">
-        <h2 class="text-center mb-4">Contact Me</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-7">
-            <div class="my-alert alert alert-success alert-dismissible fade show d-none" role="alert">
-              <strong>Holy guacamole!</strong> Thank you for sending me some love.
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <section id="contact">
+        <div class="container-fluid pb-5">
+          <h2 data-aos="fade-up" class="text-center mb-4">Contact Me</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-7">
+              <div class="my-alert alert alert-success alert-dismissible fade show d-none" role="alert">
+                <strong>Holy guacamole!</strong> Thank you for sending me some love.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <form data-aos="flip-up" data-aos-delay="100" name="contact-form">
+                <div class="mb-3">
+                  <label for="namaLengkap" class="form-label">Nama Lengkap</label>
+                  <input type="text" class="form-control" id="namaLengkap" aria-describedby="namaLengkap" name="nama" />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required />
+                </div>
+                <div class="mb-3">
+                  <label for="pesan" class="form-label">Pesan</label>
+                  <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+                </div>
+                <input class="btn btn-primary btn-kirim" type="submit" value="Kirim" />
+                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                  <span role="status">Loading...</span>
+                </button>
+              </form>
             </div>
-            <form name="contact-form">
-              <div class="mb-3">
-                <label for="namaLengkap" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="namaLengkap" aria-describedby="namaLengkap" name="nama" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required />
-              </div>
-              <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
-              </div>
-              <input class="btn btn-primary btn-kirim" type="submit" value="Kirim" />
-              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                <span role="status">Loading...</span>
-              </button>
-            </form>
           </div>
         </div>
       </section>
@@ -198,6 +249,35 @@
           })
           .catch((error) => console.error('Error!', error.message));
       });
+    </script>
+
+    <!-- gsap script -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('h5.fw-light', { duration: 2, delay: 1.5, text: 'Welcome to My Website' });
+      gsap.from('#home img', { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from('#navId', { duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce' });
+      gsap.from('h1.display-4', { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back' });
+    </script>
+
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll('.gallery-img');
+      console.log(galleryImage);
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = 'fade-down';
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+      // galleryImage.forEach(function (img, i) {
+      //   img.dataset.aos = 'fade-down';
+      // });
+
+      // AOS muncul hanya sekali
+      AOS.init({ once: true, duration: 500 });
     </script>
   </body>
 </html>

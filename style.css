@@ -1,6 +1,6 @@
 #home,
 #card-gallery,
-#contact {
+#animal {
   background-color: #e2edff;
 }
 
@@ -14,4 +14,91 @@ section {
 
 #gallery .row > * {
   padding: 0;
+}
+
+.animal-box {
+  background-color: #0d6efd;
+  border-radius: 10px;
+  height: 500px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.animal-box::before {
+  content: 'ANIMAL';
+  position: absolute;
+  top: 30px;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.animal-box:hover::before {
+  right: 50%;
+  transform: translate(50%, 0);
+  opacity: 0.2;
+}
+
+.animal-box::after {
+  content: 'WORLD';
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.animal-box:hover::after {
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.2;
+}
+
+.animal-name {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  font-size: 2rem;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(0, 0, 50px);
+}
+
+.animal-box:hover .animal-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.key-detail-btn {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.5s;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.animal-box:hover .key-detail-btn {
+  bottom: 5px;
+  opacity: 1;
+  transform: translate3d(-50%, 0, 50px);
+}
+
+.animal-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 355px;
+  transition: 0.5s;
+}
+
+.animal-box:hover .animal-img {
+  transform: translate3d(-50%, -50%, 100px) scale(1.1);
 }
